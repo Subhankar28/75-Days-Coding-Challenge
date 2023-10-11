@@ -1,8 +1,8 @@
 class Solution:
     def maxProfit(self,prices):
-        max_price = 0
+        profit = 0
         min_price = prices[0]
         for price in prices[1:]:
-            max_price = max(max_price, price-min_price)
+            profit = max(profit, price-min_price)
             min_price = min(min_price,price)
-        return max_price
+        return profit
